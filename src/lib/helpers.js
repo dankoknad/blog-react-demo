@@ -1,6 +1,6 @@
-export const baseUrl = 'https://www.scripttic.com:8000/api/v1/article';
+export const baseUrl = 'http://www.scripttic.com:8000/api/v1/article';
 // TO DO
-// shorten baseUrl to 'https://www.scripttic.com:8000/api/v1/'
+// shorten baseUrl to 'http://www.scripttic.com:8000/api/v1/'
 
 // load data
 export const getData = (url) => {
@@ -22,7 +22,7 @@ export const getToken = (url, formData) => {
 
 // get currently logged user
 export const getLoggedUser = (token) => {
-  return fetch(`https://www.scripttic.com:8000/api/v1/user?api_key=Bearer ${token}`, {
+  return fetch(`http://www.scripttic.com:8000/api/v1/user?api_key=Bearer ${token}`, {
 		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
@@ -34,7 +34,7 @@ export const getLoggedUser = (token) => {
 
 // logout
 export const logOut = (token) => {
-  return fetch(`https://www.scripttic.com:8000/api/v1/user/logout?api_key=Bearer ${token}`, {
+  return fetch(`http://www.scripttic.com:8000/api/v1/user/logout?api_key=Bearer ${token}`, {
 		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
@@ -51,7 +51,7 @@ export const logOut = (token) => {
 
 // register new user
 export const registration = (newUser) => {
-  return fetch('https://www.scripttic.com:8000/api/v1/user', {
+  return fetch('http://www.scripttic.com:8000/api/v1/user', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -63,7 +63,7 @@ export const registration = (newUser) => {
 
 // post new article
 export const submitNewArticle = (token, payload) => {
-	return fetch(`https://www.scripttic.com:8000/api/v1/article?api_key=Bearer ${token}`, {
+	return fetch(`http://www.scripttic.com:8000/api/v1/article?api_key=Bearer ${token}`, {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
@@ -75,7 +75,7 @@ export const submitNewArticle = (token, payload) => {
 
 // post new comment
 export const submitNewComment = (token, payload, articleId) => {
-	return fetch(`https://www.scripttic.com:8000/api/v1/article/${articleId}/comment?api_key=Bearer ${token}`, {
+	return fetch(`http://www.scripttic.com:8000/api/v1/article/${articleId}/comment?api_key=Bearer ${token}`, {
 		method: 'POST',
 		headers: {
 			'Accept': 'application/json',
@@ -87,7 +87,7 @@ export const submitNewComment = (token, payload, articleId) => {
 
 // delete comment
 export const removeComment = (articleId, commentId, token) => {
-  return fetch(`https://www.scripttic.com:8000/api/v1/article/${articleId}/comment/${commentId}?api_key=Bearer ${token}`, {
+  return fetch(`http://www.scripttic.com:8000/api/v1/article/${articleId}/comment/${commentId}?api_key=Bearer ${token}`, {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',

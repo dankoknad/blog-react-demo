@@ -86,7 +86,7 @@ class App extends Component {
 				// const {loginEmailVal, loginPassVal} = this.state;
 				// const formData = `grant_type=Bearer&email=${loginEmailVal}&password=${loginPassVal}`;
 
-				// getToken('https://www.scripttic.com:8000/oauth2/token', formData)
+				// getToken('http://www.scripttic.com:8000/oauth2/token', formData)
 				// .then(token => {
 				// 	this.setState({token});
 
@@ -104,7 +104,7 @@ class App extends Component {
 		const {loginEmailVal, loginPassVal} = this.state;
 		const formData = `grant_type=Bearer&email=${loginEmailVal}&password=${loginPassVal}`;
 		
-		getToken('https://www.scripttic.com:8000/oauth2/token', formData)
+		getToken('http://www.scripttic.com:8000/oauth2/token', formData)
 			.then(token => {
 				this.setState({token});
 
@@ -177,7 +177,7 @@ class App extends Component {
 			.then((response) => {	
 				(!response.ok)
 					? msg(response.status)
-					: getToken('https://www.scripttic.com:8000/oauth2/token', formData)
+					: getToken('http://www.scripttic.com:8000/oauth2/token', formData)
 						.then(token => {
 							this.setState({
 								token,
