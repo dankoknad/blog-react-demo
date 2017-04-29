@@ -56,13 +56,14 @@ class App extends Component {
 		signInFirstName: 'abc',
 		signInLastName: 'abc',
 		signInEmailVal: 'abc@def.com',
-		signInPassVal: '123',
+		signInPassVal: '123', 
 		signInErrMsg: '',
 		newArticleTitle: '',
 		newArticleContent: '',
 		newCommentTitle: 'Some title',
 		newCommentContent: 'Some content',
-		isUserAllowedCommentsRemoval: false
+		isUserAllowedCommentsRemoval: false,
+		windowWidth: window.innerWidth,
 	}
 
 	// get initial data
