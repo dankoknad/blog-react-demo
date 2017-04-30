@@ -4,16 +4,16 @@ import {LinkContainer} from 'react-router-bootstrap';
 
 const Navigation = ({loggedUser, token}) => {
 	return (
-		<Navbar inverse collapseOnSelect>
+		<Navbar collapseOnSelect>
 			<Navbar.Header>
 				<Navbar.Toggle />
 				{(loggedUser.firstName && token.length === 36) && 
-					<LinkContainer to="/profile" exact activeClassName="active">
+					<LinkContainer className="list-unstyled" to="/profile" exact activeClassName="active">
 							<NavItem eventKey={2} href="#">
-						<Navbar.Brand>
-								Hello {loggedUser.firstName}
-						</Navbar.Brand>
-								</NavItem>
+								<Navbar.Brand>
+										Hello {loggedUser.firstName}
+								</Navbar.Brand>
+							</NavItem>
 					</LinkContainer>
 				}
 			</Navbar.Header>
